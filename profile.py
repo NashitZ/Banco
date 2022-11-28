@@ -2,32 +2,35 @@ class Client:
     ##atributos##
     #
     ##fin atributos##
-    def __init__(self,run,password,password2,name,type_account,quantity,saldo):
+    def __init__(self,run,password,name,last_name,mail,type_account,quantity,balance):
         self.run=run
         self.password=password
-        self.password2=password2
         self.name=name
+        self.last_name=last_name
+        self.mail=mail
         self.type_account=type_account
         self.quantity=quantity
-        self.saldo=quantity
+        self.balance=0
 
-    def deposito(self):
+    def summary(self):
+        print("\nResumen de deposito")
         print("\nRut: ",self.run)
-        print("Nombre: ",self.name)
+        print("Nombre: ",self.name,self.last_name)
+        print("Correo: ",self.mail)
         print("Tipo de cuenta:",self.type_account)
-        print("Cantidad de deposito:",self.quantity)
+        print("Monto de deposito:",self.quantity)
 
 
-    def giro(self):
+    def turn(self):
         if (int(self.quantity) > 0):
-            self.saldo+=self.quantity
-            print("Tu saldo es de:",int(self.saldo))
+            self.balance+=int(self.quantity)
         elif (int(self.quantity) < 0):
             print("ingrese un valor positivo")
         elif (int(self.quantity) ==0):
             print("ingrese un monto valido")
         else:
             print("incorrecto")
+
 
 
 
