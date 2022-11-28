@@ -11,18 +11,23 @@ def main():
 
         print("\nBienvenido/a complete sus datos\n")
 
-        name = input("\nIngrese nombres: ")
+        name = input("\nNombre: ")
+        last_name = input("ingrese su apellido: ")
+        mail = input("Correo:")
         type_account = input("Tipo cuenta: ")
 
         print("\nIngrese el monto a depositar\n")
-        saldo=23500
-
-        print("\nTu saldo actual es de:", saldo)
+        balance=0
 
         quantity = input("Cantidad: ")
-        user=Client(run,password,password2,name,type_account,quantity,saldo)
+        user=Client(run,password,name,last_name,mail,type_account,quantity,balance)
 
-        user.giro()
+        user.turn()
+        if int(quantity)>0:
+            user.summary()
+        else:
+            print("vuelva a intentar")
+
 
     else:
         print("contrase;a incorrecta")
