@@ -4,8 +4,8 @@ def main():
     print("\nBanco Estado\n")
 
     run = input("Ingrese su run sin digito verificador: ")
-    password= input("ingrese su contrase;a: ")
-    password2= input("Confirme su contrase;a: ")
+    password= input("ingrese su contrasena: ")
+    password2= input("Confirme su contrasena: ")
 
     if password==password2:
 
@@ -30,7 +30,7 @@ def main():
 
 
     else:
-        print("contrase;a incorrecta")
+        print("contrasena incorrecta")
     
 
 
